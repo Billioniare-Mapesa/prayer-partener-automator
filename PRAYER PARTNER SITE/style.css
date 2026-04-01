@@ -1,0 +1,66 @@
+:root {
+    --primary: #4a6cf7;
+    --success: #27ae60;
+    --dark: #2d3436;
+    --light: #f9f9f9;
+    --danger: #ff7675;
+    --gray: #b2bec3;
+    --gold-bg: #fffdf2;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 20px;
+}
+
+.container { max-width: 700px; margin: 0 auto; }
+.hidden { display: none !important; }
+
+/* Auth */
+.auth-container { display: flex; justify-content: center; align-items: center; gap: 10px; margin-bottom: 20px; min-height: 40px;}
+.btn-access { background: transparent; border: 1px solid var(--gray); color: var(--gray); padding: 6px 14px; border-radius: 20px; cursor: pointer; }
+.login-panel { display: flex; gap: 8px; background: white; padding: 5px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+#adminPassword { padding: 8px; border: 1px solid #ddd; border-radius: 4px; width: 130px; }
+.btn-auth { background: var(--dark); color: white; border: none; padding: 8px 15px; border-radius: 6px; cursor: pointer; }
+.btn-cancel { border: none; background: #eee; cursor: pointer; padding: 0 10px; border-radius: 4px; }
+
+/* General UI */
+.card { background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); margin-bottom: 25px; }
+.subtitle { color: #636e72; font-size: 0.9rem; margin-top: -10px; margin-bottom: 20px; }
+.input-row { display: flex; gap: 10px; margin-bottom: 15px; }
+input, select { flex: 1; padding: 12px; border: 1px solid #dfe6e9; border-radius: 8px; }
+
+.btn { width: 100%; padding: 12px; border: none; border-radius: 8px; font-weight: 600; cursor: pointer; transition: 0.2s; }
+.btn-primary { background: var(--primary); color: white; }
+.btn-secondary { background: var(--gray); color: white; margin-top: 10px; }
+.btn-trigger { background: var(--success); color: white; margin-top: 10px; }
+
+/* Registration Message Area */
+.message-area {
+    margin-top: 15px;
+    padding: 12px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: 500;
+    animation: fadeIn 0.3s ease-in;
+}
+.msg-success { background-color: #e8f5e9; color: #2e7d32; border: 1px solid #c8e6c9; }
+.msg-error { background-color: #ffebee; color: #c62828; border: 1px solid #ffcdd2; }
+
+/* Admin List */
+.member-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 10px; margin-top: 15px; }
+.member-tag { background: var(--light); padding: 8px; border-radius: 6px; display: flex; justify-content: space-between; border: 1px solid #eee; font-size: 0.85rem; }
+.remove-btn { color: var(--danger); border: none; background: none; cursor: pointer; font-weight: bold; }
+.badge { background: #dff9fb; color: #0984e3; padding: 4px 10px; border-radius: 20px; font-size: 0.75rem; }
+
+/* Display */
+.pair-item { background: #f8faff; border-left: 5px solid var(--primary); padding: 12px; margin-bottom: 8px; border-radius: 0 8px 8px 0; text-align: center; font-weight: 500; }
+.inspiration-box { margin-top: 30px; padding: 20px; background: var(--gold-bg); border: 1px solid #f9ebae; border-radius: 10px; text-align: center; }
+blockquote { font-style: italic; font-size: 1.1rem; margin: 15px 0; }
+.prayer-text { margin-top: 15px; padding-top: 15px; border-top: 1px dashed #f9ebae; }
+.timestamp { font-size: 0.8rem; color: #636e72; text-align: center; }
+
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@media (max-width: 500px) { .input-row { flex-direction: column; } }

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Family Prayer Partners</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🙏 Prayer Partners</h1>
+            
+            <div id="authWrapper" class="auth-container">
+                <button id="showLoginBtn" class="btn-access">Admin Access</button>
+                <div id="loginPanel" class="login-panel hidden">
+                    <input type="password" id="adminPassword" placeholder="Enter Password">
+                    <button id="loginBtn" class="btn-auth">Login</button>
+                    <button id="cancelLoginBtn" class="btn-cancel">✕</button>
+                </div>
+                <button id="logoutBtn" class="btn-auth hidden">Logout Admin</button>
+            </div>
+        </header>
+
+        <section id="registrationSection" class="card">
+            <h2>Join the Family</h2>
+            <p class="subtitle">Enter your name once to be included in all future rotations.</p>
+            <form id="registrationForm" class="public-form">
+                <div class="input-row">
+                    <input type="text" id="firstName" placeholder="Your First Name" required>
+                    <select id="occupation" required>
+                        <option value="" disabled selected>Select Role</option>
+                        <option value="Aunty">Aunty</option>
+                        <option value="Uncle">Uncle</option>
+                        <option value="Grandchild">Grandchild</option>
+                        <option value="Parent">Parent</option>
+                        <option value="Cousin">Cousin</option>
+                    </select>
+                    <select id="gender">
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary">Register Me</button>
+            </form>
+            <div id="regMessage" class="message-area hidden"></div>
+        </section>
+
+        <main id="adminSection" class="card hidden">
+            <div class="admin-header">
+                <h2>Admin Control Panel</h2>
+                <span class="badge">Authenticated</span>
+            </div>
+
+            <div class="member-management">
+                <h3>Family Database (<span id="memberCount">0</span>)</h3>
+                <div id="memberList" class="member-grid"></div>
+            </div>
+
+            <hr>
+            
+            <div class="controls">
+                <button id="generateBtn" class="btn btn-trigger">Shuffle & Publish New Pairs</button>
+                <button id="shuffleDailyBtn" class="btn btn-secondary">Shuffle Daily Prayer Now</button>
+            </div>
+        </main>
+
+        <section id="publicSection" class="card">
+            <h2>This Month's Partners</h2>
+            <div id="pairsDisplay" class="pairs-container"></div>
+            <p id="lastUpdated" class="timestamp"></p>
+
+            <div id="dailyInspiration" class="inspiration-box">
+                <div class="insp-header">📖 Daily Word & Prayer</div>
+                <blockquote id="bibleVerse"></blockquote>
+                <p id="encouragementNote"></p>
+                <div class="prayer-text">
+                    <strong>Today's Prayer:</strong> <span id="prayerContent"></span>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
